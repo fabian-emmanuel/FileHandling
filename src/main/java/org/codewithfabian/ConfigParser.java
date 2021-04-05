@@ -19,7 +19,6 @@ public class ConfigParser {
         try {
             FileReader reader = new FileReader(filePath);
             scReader = new Scanner(reader);
-
             while(scReader.hasNextLine()){
                 String data = scReader.nextLine();
 
@@ -28,7 +27,6 @@ public class ConfigParser {
                     String[] arrStr = data.split("=");
                     String key = arrStr[0];
                     String value = arrStr[1];
-
                     if(readFile.size() != 0){
                         for(Map.Entry<String, String> items: readFile.entrySet()){
                             if(key.equals("name")) key = "application.name";
