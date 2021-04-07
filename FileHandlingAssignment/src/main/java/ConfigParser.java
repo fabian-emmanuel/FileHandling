@@ -19,7 +19,7 @@ public class ConfigParser {
                 if (line.contains("=")) {
                     strData = line.split("=");
                     if (strData.length > 1) {
-                        if (!(strData[0].equals("dbname")) && !(strData[0].equals("host"))) {
+                        if ((strData[0].equals("name")) || (strData[0].equals("port")) || (strData[0].equals("context-url"))) {
                             strData[0] = "application." + strData[0];
                         }
                     }

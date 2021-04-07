@@ -10,7 +10,18 @@ public class Main {
 
         assert filePath != null;
         ConfigParser config = new ConfigParser();
-        String valueOf = config.configParser(filePath).get("application.mode");
-        System.out.println(valueOf);
+
+        String valueOfDbname = config.configParser(filePath).get("dbname");
+        String valueOfHost = config.configParser(filePath).get("host");
+        String valueOfMode = config.configParser(filePath).get("mode");
+        String valueOfTheme = config.configParser(filePath).get("theme");
+        String valueOfPipeline = config.configParser(filePath).get("pipeline");
+        System.out.println(valueOfDbname + " ** " + valueOfHost + " ** " + valueOfMode + " ** " + valueOfTheme + " ** " + valueOfPipeline );
+
+
+        String valueOfName = config.configParser(filePath).get("application.name");
+        String valueOfPort = config.configParser(filePath).get("application.port");
+        String valueOfContextUrl = config.configParser(filePath).get("application.context-url");
+        System.out.println(valueOfName + " ** " + valueOfPort + " ** " + valueOfContextUrl);
     }
 }

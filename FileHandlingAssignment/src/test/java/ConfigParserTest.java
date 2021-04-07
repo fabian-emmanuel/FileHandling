@@ -9,6 +9,6 @@ public class ConfigParserTest {
         String filePath = "src/main/resources/config.txt/";
         ConfigParser config = new ConfigParser();
         String expected = "production";
-        assertEquals(expected, config.configParser(filePath).get("application.mode"));
+        assertEquals(expected, config.configParser(filePath).get("application.name"));
     }
 }
